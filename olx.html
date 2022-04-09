@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .dropbtn {
+  background-color: #fdfffe;
+  color: rgb(15, 4, 4);
+  padding: 16px;
+  font-size: 16px;
+  border: 2px solid black;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 1pc;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #e8f80e;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 10pc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(22, 21, 21);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: rgb(252, 0, 0);}
+
+.show {display: block;}
+.mySlides {display:none;}
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 20px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-row">
+       
+       <div><img src="OLX_Logo.jpg" width="150pc" height="100pc"></div>
+                
+         
+      
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Rajamahendravaram</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+              <a href="#about">Innspeta</a>
+              <a href="#base">Relanginookalamma Nagar</a>
+              <a href="#blog">Sri Nagar</a>
+              <a href="#contact">Rajaendranagar</a>
+              <a href="#custom">Prakashnagar</a>
+              <a href="#support">Danavaipta</a>
+              <a href="#tools">Morampudi</a>
+            </div>
+          </div>
+
+       <div>
+        <div style="margin-left: 20pc; margin-top: 2pc; height: 10px;">
+          <div class="topnav">
+            <input type="text" placeholder="Search..">
+          </div>
+        </div>
+       </div>
+          <div>  <button style="width: 100px; margin-left: 200px; margin-top: 2pc;" ><a href="https://accounts.google.com/signin/v2/identifier?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"> Login</a></button></div>
+          </div>
+      
+          <script>
+          /* When the user clicks on the button,
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          function filterFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("myDropdown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+              txtValue = a[i].textContent || a[i].innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+              } else {
+                a[i].style.display = "none";
+              }
+            }
+          }
+          </script>
+          </div>
+         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-size: 1pc;">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="file:///C:/Users/intel/Desktop/cars/cars.html"><strong>Cars </strong><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.olx.in/rajahmundry_g4058567/motorcycles_c81"><strong>Motorcycles</strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.olx.in/rajahmundry_g4058567/mobile-phones_c1453"><strong>Mobile Phones</strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="https://www.olx.in/rajahmundry_g4058567/for-sale-houses-apartments_c1725"><strong>For sale:Houses & Apartments</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="https://www.olx.in/rajahmundry_g4058567/scooters_c1413"><strong>Scooters</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="https://www.olx.in/rajahmundry_g4058567/commercial-other-vehicles_c85"><strong>Commercial&Other Vehicles</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="https://www.olx.in/rajahmundry_g4058567/for-rent-houses-apartments_c1723"><strong>For Rent:Houses&Apartments</strong></a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+          <div>
+            <div class="w3-content w3-section" style="max-width:100%" >
+              <img class="mySlides" src="5ab46ee4N9b8609692.jpg" style="width:100%" height="300px">
+              <img class="mySlides" src="20210925-iphone-13-pro-03.webp" style="width:100%" height="500px">
+              <img class="mySlides" src="pexels-photo-170811.jpeg" style="width:100%" height=500px">
+              <img class="mySlides" src="61KEYkZIejL._SL1302_.jpg" style="width:100%" height="500px">
+              <img class="mySlides" src="download (1).jpg" style="width:100%" height="500px">
+              <img class="mySlides" src="download (4).jpg" style="width:100%" height="500px">
+            </div>
+            
+            <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+            </script>
+          </div>
+<div>
+   <img src="3121158015506966357 (2).png" width="100%">
+</div>
+
+<div class="d-flex flex-row" style="margin-left: 2pc; text-align: center; margin-top: 1pc;border-radius: 10px">
+    <div style="border: 2px solid black; border-radius: 20%;"  >
+        <img src="image (1).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+        <h2>$30,000</h2>
+        <p>Maruthi Suzuki alto k10 vxl,2017</p>
+    </div>
+<div style="border: 2px solid black; margin-left: 1pc; border-radius: 20%;">
+    <img src="image (2).webp" width="300pc" height="200pc" style="border-radius: 50%;" >
+    <h2>$3,33,000</h2>
+    <p>Hundai Elite i20 1.2 ,2019, Petrol</p>
+    <p>OLD Fardibad</p>
+</div>
+<div style="border: 2px solid black; margin-left: 1pc; border-radius: 20%;">
+    <img src="image (3).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$33,000</h2>
+    <p>Sofa Three Sitting </p>
+    <p>ORajahmundry</p>
+</div>
+<div style="border: 2px solid black; margin-left: 1pc; border-radius: 20%;">
+    <img src="image (4).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$1,00,000</h2>
+    <p>Oldtimer & Youngtimer for sale </p>
+    <p>Check out more than 4000 Classic Cars and
+        Youngtimer listed. Find out more!</p>
+</div>
+</div>
+<div class="d-flex flex-row" style="margin-top: 1pc; margin-left: 2pc;text-align: center; ">
+<div style="border: 2px solid black; border-radius: 20%;">
+    <img src="image (5).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$17,000</h2>
+    <p>Iron queen sized bed with matters </p>
+    <p>Greem daimon layot Banglore</p> 
+</div>
+<div style="border: 2px solid black; margin-left: 1pc; border-radius: 20%;">
+    <img src="image (6).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$48,000</h2>
+    <p>iphone xs max 64GB internal rose gold</p>
+    <p>Vishakhapatnam</p> 
+</div>
+<div style="border: 2px solid black; margin-left: 1pc; border-radius: 20%;">
+    <img src="image (7).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$88,000</h2>
+    <p>iphone xs max 164GB internal balack</p>
+    <p>Hyderabad</p> 
+</div>
+<div style="border: 2px solid black; margin-left: 1pc; border-radius: 20%;">
+    <img src="image (8).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$18,000</h2>
+    <p>Honda bs6 active low dwn payment</p>
+    <p>Tuni</p> 
+</div>
+</div>
+<div class="d-flex flex-row" style="margin-top: 1pc; margin-left: 2pc;text-align: center;">
+    <div style="border: 2px solid black; border-radius: 20%;">
+        <img src="image (9).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+        <h2>$22,000</h2>
+        <p>Honda bs6 active low dwn payment</p>
+        <p>Rajahmundry</p> 
+    </div>
+    <div style="border: 2px solid black;margin-left: 1pc; border-radius: 20%;">
+        <img src="image (10).webp" width="300pc" height="200pc" style="border-radius: 50%;" >
+        <h2>$567</h2>
+        <p>Relaxed trendy men sports shoes</p>
+        <p>Anna nagar ,Madurai</p>   
+    </div>
+    <div style="border: 2px solid black;margin-left: 1pc; border-radius: 20%;">
+        <img src="image (11).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+        <h2>$10,500</h2>
+        <p>Wholsale 43 inch LED Tv full hd </p>
+        <p>Uppal ,Hyderabad</p>   
+    </div>
+    <div style="border: 2px solid black;margin-left: 1pc; border-radius: 20%;">
+        <img src="image (12).webp"width="300pc" height="200pc" style="border-radius: 50%;" >
+        <h2>$27,50,001</h2>
+        <p>Something treanding@ nursalry </p>
+        <p>Kadiun</p>   
+    </div>
+</div>
+<div class="d-flex flex-row" style="margin-top: 1pc; margin-left: 2pc; text-align: center;">
+<div style="border: 2px solid black;border-radius: 20%;">
+    <img src="image (13).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$1,598</h2>
+    <p>Celing fan, fan hindware ceiling fan bajaj ceiling fan discout ... </p>
+    <p>Punjab</p>    
+</div>
+<div style="border: 2px solid black;margin-left: 1pc;border-radius: 20%;">
+    <img src="image (14).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$19,00,000</h2>
+    <p>19lakhas 2bhk new apartment flats nadidupeta beside enadu ofice </p>
+    <p>Guntur Andhara pradesh</p>    
+</div>
+<div style="border: 2px solid black;margin-left: 1pc;border-radius: 20%;"> 
+    <img src="image (15).webp"width="300pc" height="200pc" style="border-radius: 50%;" >
+    <h2>$280</h2>
+    <p>Printed poly contten double bed sheet </p>
+    <p>Rajahmundry</p>    
+</div>
+<div style="border: 2px solid black;margin-left: 1pc; border-radius: 20%;">
+    <img src="image (16).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$1700</h2>
+    <p>Antique 13inch marine telescope ottway ealing london 1915 </p>
+    <p>Haryana</p>    
+</div>
+</div>
+<div class="d-flex flex-row" style="margin-top: 1pc; margin-left: 2pc; text-align: center;border-radius: 20%;">
+<div style="border: 2px solid black; " >
+    <img src="image (17).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$5000</h2>
+    <p>Kids driving electric toy car merceddes bens at lowest prices  </p>
+    <p>chennai tamilnadu</p>   
+</div>
+<div style="border: 2px solid black;margin-left: 1pc; border-radius: 20%;">
+    <img src="image (18).webp" width="300pc" height="200pc" style="border-radius: 50%;" >
+    <h2>$3,800</h2>
+    <p>Asus zen watch gulf reter zyear old fresh condition </p>
+    <p>Kerala</p>   
+</div>
+<div style="border: 2px solid black; margin-left: 1pc; border-radius: 20%;border-radius: 20%;">
+    <img src="image (19).webp"  width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$800</h2>
+    <p>wall clock only 800rs</p>
+    <p>Rajahmundry</p>   
+</div>
+<div style="border: 2px solid black; margin-left: 1pc;border-radius: 20%;">
+    <img src="image (20).webp" width="300pc" height="200pc" style="border-radius: 50%;">
+    <h2>$450</h2>
+    <p>Stylish  </p>
+    <p>Rajahmundry</p>   
+</div>
+</div>
+<div class="d-flex flex-row" style="margin-top: 1pc; margin-left: 2pc; text-align: center;border-radius: 20%;">
+<div style="border: 2px solid black;">
+    <img src="image (21).webp" width="300pc" height="200pc" style="border-radius: 50%;" >
+    <h2>$23,00</h2>
+    <p>MQ Gradiather clock 2515 </p>
+    <p>RaKerala India</p> 
+</div>
+<div style="border: 2px solid black;margin-left: 1pc;border-radius: 20%;">
+    <img src="image (22).webp" width="300pc" height="200pc" style="border: 50%;">
+    <h2>$48,000</h2>
+    <p>Sealed aple watch series 74mm cellular blue color indian purchase </p>
+    <p>Vijawada</p> 
+</div>
+<div style="border: 2px solid black;margin-left: 1pc; border-radius: 20%;">
+    <img src="image (23).webp" width="300pc" height="200pc" style="border-radius: 50%;" >
+    <h2>$600</h2>
+    <p>Soft mehroom bedsheet </p>
+    <p>Kakinada</p> 
+</div>
+<div style="border: 2px solid black; margin-left: 1pc; border-radius: 20%;">
+    <img src="image (7).webp" width="300pc" height="200pc" style="border-radius: 50%;" >
+    <h2>$600</h2>
+    <p>Soft mehroom bedsheet </p>
+    <p>Kakinada</p> 
+</div>
+</div>
+<div class="d-flex flex-row">
+  <div>
+    <img src="phone-app.webp">
+  </div>
+  <div style="margin-top: 3pc;">
+    <h2>TRY THE OLX APP</h2>
+    <p>Buy, sell and find just about anything using the app on your mobile.</p>
+  </div>
+<div style="margin-top: 3pc; margin-left: 3pc;">
+  <h3>GET YOUR APP TODAY</h3>
+  <img src="appstore_2x.webp">
+  <img src="playstore_2x.webp">
+</div>
+</div>
+<div class="d-flex flex-row"  style="background-color: #bed6bf; margin-top: 2pc;">
+<div style="margin-left: 4pc;">
+    <h6>POPULAR LOCATIONS</h6>
+    <small><p>Kolkata</p>
+        <p>Mumbai</p>
+        <p>Chennai</p>
+        <p>Pune</p></small>
+    
+</div>
+<div style="margin-left: 2pc;">
+  
+    <h6>TRENDING LOCATIONS</h6>
+    <small>
+        <p>Bhubaneshwar</p>
+        <p>Hyderabad</p>
+        <p>Chandigarh</p>
+        <p>Nashik</p>
+    </small>
+   
+</div>
+<div style="margin-left: 2pc;">
+    <h6>ABOUT US</h6>
+    <small> <p>About OLX Group</p>
+        <p>Careers</p>
+        <p>Contact Us</p>
+        <p>OLXPeople</p>
+        <p>OWaah Jobs</p></small>
+   
+</div>
+<div style="margin-left: 2pc;">
+    <h6>OLX</h6>
+    <small><p>Help</p>
+        <p>Sitemap</p>
+        <p>Legal & Privacy information</p>
+        <p>Blog</p></small>
+    
+</div>
+<div style="margin-left: 5pc;" >
+    <h6>FOLLOW US </h6>
+    <i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-instagram-square"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-solid fa-circle-pause"></i><br>
+<img src="playstore_2x.webp" width="100pc" height="50pc">
+<img src="appstore_2x.webp"  width="100pc" height="50pc">
+</div>
+</div>
+<div class="d-flex flex-row" style="background-color: darkolivegreen;">
+        <div style="margin-top: 2pc; ">
+            <p style="margin-left: 8px;">Other Countries Pakistan - South Africa - Indonesia</p> 
+         </div>
+         <div style="margin-left: 40pc; margin-top: 2pc; ">
+             <p>Free Classifieds in India  . © 2006-2022 OLX</p>
+         </div>
+</div>
+</body>
+</html>
